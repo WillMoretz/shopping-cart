@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <header>
-      <div>Logo</div>
+      <div>
+        <Link to="/">Logo</Link>
+      </div>
       <nav>
         <ul>
           <li>
@@ -18,7 +20,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <div>Cart</div>
+      <button type="button">Cart</button>
     </header>
   );
 }
