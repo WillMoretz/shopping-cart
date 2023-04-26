@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ProductCard from "./ProductCard";
 
 function Shop(props) {
   const { error, products } = props;
@@ -24,11 +25,14 @@ function Shop(props) {
     return <section>loading...</section>;
 
   const shopItems = (
-    <ul>
+    <div>
       {shownProducts.map((product) => (
-        <li key={`product${product.title}${product.id}`}>{product.title}</li>
+        <ProductCard
+          key={`product${product.title}${product.id}`}
+          product={product}
+        />
       ))}
-    </ul>
+    </div>
   );
 
   return <section>{shopItems}</section>;

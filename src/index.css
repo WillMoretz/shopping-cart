@@ -38,6 +38,11 @@ section {
   flex: 1;
 }
 
+.product-card > img {
+  aspect-ratio: 1.1;
+  width: 100px;
+}
+
 footer {
   text-align: center;
 }
