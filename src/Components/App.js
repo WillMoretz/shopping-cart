@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Contact from "./Contact";
+import Home from "./Home";
 import "../index.css";
 
 async function fetchProducts() {
@@ -41,7 +42,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<section>Home</section>} />
+        <Route path="/" element={<Home />} />
         <Route path="/shop" element={<section>Shop</section>} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
