@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../img/dune.svg";
 
 function Header() {
   return (
     <header>
-      <div>
-        <Link to="/">Logo</Link>
-      </div>
+      <Link to="/" className="brand">
+        <img src={logo} alt="link to home page" className="logo" />
+        <h1>Sahara</h1>
+      </Link>
       <nav>
         <ul className="header-links">
           <li>
