@@ -8,7 +8,7 @@ function Header() {
         <Link to="/">Logo</Link>
       </div>
       <nav>
-        <ul>
+        <ul className="header-links">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -20,7 +20,9 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <button type="button">Cart</button>
+      <button type="button" id="cart-button">
+        Cart
+      </button>
     </header>
   );
 }
