@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Contact from "./Contact";
 import Home from "./Home";
+import Shop from "./Shop";
 import "../index.css";
 
 async function fetchProducts() {
@@ -43,7 +44,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<section>Shop</section>} />
+        <Route
+          path="/shop"
+          element={<Shop error={fetchError} products={products} />}
+        />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <footer>Made by Will Moretz</footer>
