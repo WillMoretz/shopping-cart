@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
+import CategorySelector from "./CategorySelector";
+
+const CATEGORIES = ["mensClothing", "womensClothing", "jewelry", "electronics"];
 
 function Shop(props) {
   const { error, products } = props;
   const [shownProducts, setShownProducts] = useState([]);
-  const [selectedCategories, setSelectedCategories] = useState([
-    "mensClothing",
-    "womensClothing",
-    "jewelry",
-    "electronics",
-  ]);
+  const [selectedCategories, setSelectedCategories] = useState(CATEGORIES);
+
+  const handleCategoryChange = (category) => {
+    if (category === "all") setSelectedCategories(CATEGORIES);
+    else setSelectedCategories([category]);
+  };
 
   useEffect(() => {
     if (Object.keys(products).length === 0) return;
@@ -35,7 +38,15 @@ function Shop(props) {
     </div>
   );
 
-  return <section>{shopItems}</section>;
+  return (
+    <section>
+      <CategorySelector
+        CATEGORIES={CATEGORIES}
+        handleClick={handleCategoryChange}
+      />
+      {shopItems}
+    </section>
+  );
 }
 
 export default Shop;
