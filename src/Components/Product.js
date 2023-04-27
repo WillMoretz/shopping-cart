@@ -9,15 +9,17 @@ function Product() {
     return <section>No Product Found</section>;
 
   const location = useLocation();
-  if (location.state === null && productValues === undefined) {
-    (async () => {
-      const result = await fetch(`https://fakestoreapi.com/products/${id}`);
-      const data = await result.json();
-      setProductValues(data);
-    })();
-  } else if (productValues === undefined) {
-    setProductValues(location.state.productValues);
-  }
+  useEffect(() => {
+    if (location.state === null && productValues === undefined) {
+      (async () => {
+        const result = await fetch(`https://fakestoreapi.com/products/${id}`);
+        const data = await result.json();
+        setProductValues(data);
+      })();
+    } else if (productValues === undefined) {
+      setProductValues(location.state.productValues);
+    }
+  }, []);
 
   return productValues === undefined ? (
     <section>loading...</section>
