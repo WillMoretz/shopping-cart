@@ -4,6 +4,7 @@ import Header from "./Header";
 import Contact from "./Contact";
 import Home from "./Home";
 import Shop from "./Shop";
+import Product from "./Product";
 import "../index.css";
 
 async function fetchProducts() {
@@ -48,6 +49,7 @@ function App() {
           path="/shop"
           element={<Shop error={fetchError} products={products} />}
         />
+        <Route path="/shop/:product" element={<Product />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <footer>Made by Will Moretz</footer>
