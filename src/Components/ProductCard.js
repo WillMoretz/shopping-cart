@@ -6,7 +6,7 @@ function ProductCard(props) {
   const { product } = props;
   return (
     <Link
-      to={`/shop/${product.title}`}
+      to={`/shop/${product.id}`}
       className="product-card"
       state={{ productValues: product }}
     >

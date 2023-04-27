@@ -49,7 +49,7 @@ function App() {
           path="/shop"
           element={<Shop error={fetchError} products={products} />}
         />
-        <Route path="/shop/:product" element={<Product />} />
+        <Route path="/shop/:id" element={<Product />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <footer>Made by Will Moretz</footer>
