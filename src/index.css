@@ -43,6 +43,11 @@ section {
   width: 100px;
 }
 
+.product-body > img {
+  aspect-ratio: 1.1;
+  width: 200px;
+}
+
 footer {
   text-align: center;
 }
