@@ -32,12 +32,11 @@ function App() {
   const [products, setProducts] = useState({});
 
   useEffect(() => {
-    async function handleFetchedData() {
+    (async () => {
       const fetchedProducts = await fetchProducts();
       if (fetchedProducts === "error") setFetchError(true);
       else setProducts(fetchedProducts);
-    }
-    handleFetchedData();
+    })();
   }, []);
 
   return (
