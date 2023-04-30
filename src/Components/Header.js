@@ -22,9 +22,6 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <button type="button" id="cart-button">
-        Cart
-      </button>
     </header>
   );
 }
