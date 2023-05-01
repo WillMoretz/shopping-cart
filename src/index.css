@@ -38,6 +38,14 @@ header,
   flex-direction: row;
 }
 
+.header-links.hidden {
+  display: none;
+}
+
+.header-links.shown {
+  display: flex;
+}
+
 .header-links {
   align-items: center;
 }

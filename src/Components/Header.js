@@ -3,6 +3,17 @@ import { Link } from "react-router-dom";
 import logo from "../img/dune.svg";
 
 function Header() {
+  function toggleHeaderLinks() {
+    const headerLinks = document.querySelector(".header-links");
+    if (headerLinks.classList.contains("hidden")) {
+      headerLinks.classList.add("shown");
+      headerLinks.classList.remove("hidden");
+    } else {
+      headerLinks.classList.remove("shown");
+      headerLinks.classList.add("hidden");
+    }
+  }
+
   return (
     <header>
       <div className="header-top">
@@ -10,7 +21,11 @@ function Header() {
           <img src={logo} alt="link to home page" className="logo" />
           <h1>Sahara</h1>
         </Link>
-        <button type="button" className="header-links-toggle">
+        <button
+          type="button"
+          className="header-links-toggle"
+          onClick={() => toggleHeaderLinks()}
+        >
           Links
         </button>
       </div>
