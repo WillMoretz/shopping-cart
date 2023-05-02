@@ -30,7 +30,7 @@ function Header() {
         </button>
       </div>
       <nav>
-        <ul className="header-links">
+        <ul className="header-links hidden">
           <div className="line-break" aria-hidden="true" />
           <li>
             <Link to="/">Home</Link>
