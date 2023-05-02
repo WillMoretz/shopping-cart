@@ -1,17 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../img/dune.svg";
 
 function Header() {
+  const [navIsHidden, setNavIsHidden] = useState(true);
+
   function toggleHeaderLinks() {
-    const headerLinks = document.querySelector(".header-links");
-    if (headerLinks.classList.contains("hidden")) {
-      headerLinks.classList.add("shown");
-      headerLinks.classList.remove("hidden");
-    } else {
-      headerLinks.classList.remove("shown");
-      headerLinks.classList.add("hidden");
-    }
+    if (navIsHidden) setNavIsHidden(false);
+    else setNavIsHidden(true);
   }
 
   return (
@@ -30,7 +26,7 @@ function Header() {
         </button>
       </div>
       <nav>
-        <ul className="header-links hidden">
+        <ul className={`header-links ${navIsHidden ? "hidden" : "shown"}`}>
           <div className="line-break" aria-hidden="true" />
           <li>
             <Link to="/">Home</Link>
