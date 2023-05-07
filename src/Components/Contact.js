@@ -9,10 +9,11 @@ function Contact() {
   return (
     <section>
       <h2>Contact Us!</h2>
-      <ul>
+      <ul className="socials">
         <li>
           <a href="https://github.com/WillMoretz/shopping-cart">
             <img
+              className="social-media-icon"
               src={githubIcon}
               alt="link to this project's github repository"
             />
@@ -20,22 +21,38 @@ function Contact() {
         </li>
         <li>
           <a href="https://google.com" target="_blank" rel="noreferrer">
-            <img src={twitterIcon} alt="link to twitter" />
+            <img
+              className="social-media-icon"
+              src={twitterIcon}
+              alt="link to twitter"
+            />
           </a>
         </li>
         <li>
           <a href="https://google.com" target="_blank" rel="noreferrer">
-            <img src={facebookIcon} alt="link to facebook" />
+            <img
+              className="social-media-icon"
+              src={facebookIcon}
+              alt="link to facebook"
+            />
           </a>
         </li>
         <li>
           <a href="https://google.com" target="_blank" rel="noreferrer">
-            <img src={instagramIcon} alt="link to instagram" />
+            <img
+              className="social-media-icon"
+              src={instagramIcon}
+              alt="link to instagram"
+            />
           </a>
         </li>
         <li>
           <a href="https://google.com" target="_blank" rel="noreferrer">
-            <img src={redditIcon} alt="link to reddit" />
+            <img
+              className="social-media-icon"
+              src={redditIcon}
+              alt="link to reddit"
+            />
           </a>
         </li>
       </ul>
