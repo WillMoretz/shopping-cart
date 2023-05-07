@@ -96,6 +96,19 @@ section {
   width: 200px;
 }
 
+.socials {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 16px;
+}
+
+.social-media-icon {
+  aspect-ratio: 1/1;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 12px;
+  border-radius: 32px;
+}
+
 footer {
   text-align: center;
 }
