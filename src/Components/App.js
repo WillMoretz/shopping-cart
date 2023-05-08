@@ -51,7 +51,9 @@ function App() {
         <Route path="/shop/:id" element={<Product />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <footer>Made by Will Moretz</footer>
+      <footer>
+        Made by <i>Will Moretz</i>
+      </footer>
     </>
   );
 }
