@@ -7,7 +7,7 @@ import githubIcon from "../img/github-icon.svg";
 
 function Contact() {
   return (
-    <section>
+    <section className="contact-page">
       <h2>Contact Us!</h2>
       <ul className="socials">
         <li>
