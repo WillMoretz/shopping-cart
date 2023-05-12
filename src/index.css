@@ -93,6 +93,17 @@ h2 {
   margin: 0.5rem 0 0rem 0;
 }
 
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 0 32px 0 32px;
+}
+
+.product-card {
+  border: 2px solid black;
+}
+
 .product-card > img {
   aspect-ratio: 1.1;
   width: 100px;
