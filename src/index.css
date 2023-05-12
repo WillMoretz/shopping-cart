@@ -115,6 +115,11 @@ h2 {
   flex-direction: column;
   align-items: center;
   position: relative;
+  transition: filter 225ms ease-in-out;
+}
+
+.product-card:hover {
+  filter: contrast(80%);
 }
 
 .product-card > img {
@@ -127,7 +132,7 @@ h2 {
   text-align: center;
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem 0 2.2rem 0;
+  padding: 1rem 2px 2.2rem 2px;
   margin-top: 1.25rem;
   font-size: clamp(14px, 2vw, 18px);
 }
