@@ -24,16 +24,15 @@ function Product() {
   return productValues === undefined ? (
     <section>loading...</section>
   ) : (
-    <section>
+    <section className="product">
       <h2>{productValues.title}</h2>
       <div className="product-body">
         <img src={productValues.image} alt={`${productValues.title}`} />
-        <p>{productValues.description}</p>
-      </div>
-      <p>{productValues.category}</p>
-      <p>{`Rating of ${productValues.rating.rate} with a total of ${productValues.rating.count} reviews`}</p>
-      <div className="checkout">
-        <div>{`$${productValues.price}`}</div>
+        <div className="product-info">
+          <div>{`$${productValues.price}`}</div>
+          <p>{`Rating of ${productValues.rating.rate} with a total of ${productValues.rating.count} reviews`}</p>
+        </div>
+        <p className="product-description">{productValues.description}</p>
         <button type="button">Add to Cart</button>
       </div>
     </section>

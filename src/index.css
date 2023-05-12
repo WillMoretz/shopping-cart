@@ -124,7 +124,7 @@ h2 {
 }
 
 .product-card > img {
-  aspect-ratio: 1.1;
+  aspect-ratio: 1/1;
   width: min(75%, 250px);
   padding-top: 0.5rem;
 }
@@ -145,9 +145,31 @@ h2 {
   font-size: clamp(12px, 2vw, 16px);
 }
 
+.product-body {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas:
+    "img info"
+    "desc desc"
+    "button button";
+}
+
 .product-body > img {
-  aspect-ratio: 1.1;
+  grid-area: img;
+  aspect-ratio: 1/1;
   width: 200px;
+}
+
+.product-info {
+  grid-area: info;
+}
+
+.product-description {
+  grid-area: desc;
+}
+
+.product-body > button {
+  grid-area: button;
 }
 
 .contact-page {
