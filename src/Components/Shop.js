@@ -28,7 +28,7 @@ function Shop(props) {
     return <section>loading...</section>;
 
   const shopItems = (
-    <div>
+    <div className="products">
       {shownProducts.map((product) => (
         <ProductCard
           key={`product${product.title}${product.id}`}
