@@ -30,7 +30,8 @@ function Product() {
         <img src={productValues.image} alt={`${productValues.title}`} />
         <div className="product-info">
           <div>{`$${productValues.price}`}</div>
-          <p>{`Rating of ${productValues.rating.rate} with a total of ${productValues.rating.count} reviews`}</p>
+          {/* <p>{`Rating of ${productValues.rating.rate} with a total of ${productValues.rating.count} reviews`}</p> */}
+          <div className="rating">★★★★★</div>
         </div>
         <p className="product-description">{productValues.description}</p>
         <button type="button">Add to Cart</button>

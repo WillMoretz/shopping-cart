@@ -145,6 +145,10 @@ h2 {
   font-size: clamp(12px, 2vw, 16px);
 }
 
+.product {
+  padding: 0 min(10vw, 320px) 0 min(10vw, 320px);
+}
+
 .product-body {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -157,11 +161,19 @@ h2 {
 .product-body > img {
   grid-area: img;
   aspect-ratio: 1/1;
-  width: 200px;
+  width: clamp(100px, 30vw, 300px);
 }
 
 .product-info {
   grid-area: info;
+}
+
+.rating {
+  font-size: 4rem;
+  display: inline-block;
+  background: linear-gradient(90deg, gold 20%, black 0%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .product-description {
