@@ -28,7 +28,6 @@ function Product() {
       "--percent",
       `${(productValues.rating.rate / 5) * 100}%`
     );
-    console.log(`${(productValues.rating.rate / 5) * 100}%`);
   }, [productValues]);
 
   return productValues === undefined ? (
@@ -39,14 +38,14 @@ function Product() {
       <div className="product-body">
         <img src={productValues.image} alt={`${productValues.title}`} />
         <div className="product-info">
-          <div>{`$${productValues.price}`}</div>
-          {/* <p>{`Rating of ${productValues.rating.rate} with a total of ${productValues.rating.count} reviews`}</p> */}
+          <div className="price">{`$${productValues.price}`}</div>
           <div
             className="rating"
             alt={`${(productValues.rating.rate / 5) * 100}% positive reviews`}
           >
             ★★★★★
           </div>
+          <div>{`Rating based on ${productValues.rating.count} user reviews`}</div>
         </div>
         <p className="product-description">{productValues.description}</p>
         <button type="button">Add to Cart</button>
