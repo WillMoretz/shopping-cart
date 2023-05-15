@@ -45,7 +45,7 @@ function Product() {
           >
             ★★★★★
           </div>
-          <div>{`Rating based on ${productValues.rating.count} user reviews`}</div>
+          <div className="review-count">{`Rating based on ${productValues.rating.count} user reviews`}</div>
         </div>
         <p className="product-description">{productValues.description}</p>
         <button type="button">Add to Cart</button>
