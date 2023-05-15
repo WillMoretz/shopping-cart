@@ -95,7 +95,7 @@ section {
 
 h2 {
   text-align: center;
-  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
   margin: 0.5rem 0 0rem 0;
 }
 
@@ -217,7 +217,7 @@ h2 {
 
 .product-body > button {
   grid-area: button;
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   width: fit-content;
   height: fit-content;
   place-self: center;
@@ -227,10 +227,12 @@ h2 {
   background-color: rgb(50, 50, 50);
   color: white;
   transition: filter 225ms ease-in-out;
+  margin-bottom: 1rem;
 }
 
 .product-body > button:hover {
   filter: contrast(80%);
+  box-shadow: rgba(100, 100, 100, 0.45) 0 4px 12px;
 }
 
 .contact-page {
