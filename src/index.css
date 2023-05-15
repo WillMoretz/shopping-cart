@@ -153,19 +153,29 @@ h2 {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-areas:
-    "img info"
-    "desc desc"
-    "button button";
+    "img desc"
+    "img desc"
+    "info button";
+  margin: 2rem 0 0 0;
+  gap: 1.5rem;
 }
 
 .product-body > img {
   grid-area: img;
   aspect-ratio: 1/1;
-  width: clamp(100px, 30vw, 300px);
+  width: clamp(100px, 30vw, 250px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
 }
 
 .product-info {
   grid-area: info;
+  text-align: center;
+  /* align-self: center; */
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .rating {
@@ -180,6 +190,8 @@ h2 {
 
 .product-description {
   grid-area: desc;
+  padding: 2rem;
+  text-indent: 2rem;
 }
 
 .product-body > button {
