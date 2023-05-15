@@ -21,6 +21,16 @@ function Product() {
     }
   }, []);
 
+  useEffect(() => {
+    if (productValues === undefined) return;
+    const rating = document.querySelector(".rating");
+    rating.style.setProperty(
+      "--percent",
+      `${(productValues.rating.rate / 5) * 100}%`
+    );
+    console.log(`${(productValues.rating.rate / 5) * 100}%`);
+  }, [productValues]);
+
   return productValues === undefined ? (
     <section>loading...</section>
   ) : (
@@ -31,7 +41,12 @@ function Product() {
         <div className="product-info">
           <div>{`$${productValues.price}`}</div>
           {/* <p>{`Rating of ${productValues.rating.rate} with a total of ${productValues.rating.count} reviews`}</p> */}
-          <div className="rating">★★★★★</div>
+          <div
+            className="rating"
+            alt={`${(productValues.rating.rate / 5) * 100}% positive reviews`}
+          >
+            ★★★★★
+          </div>
         </div>
         <p className="product-description">{productValues.description}</p>
         <button type="button">Add to Cart</button>

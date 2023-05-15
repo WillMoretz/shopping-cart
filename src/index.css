@@ -171,7 +171,9 @@ h2 {
 .rating {
   font-size: 4rem;
   display: inline-block;
-  background: linear-gradient(90deg, gold 20%, black 0%);
+  /* percent variable set in Product Component */
+  background: linear-gradient(90deg, gold var(--percent), black 0%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
