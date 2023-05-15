@@ -15,6 +15,7 @@ a {
 
 :root {
   --desert-gold: #e2a754;
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
 }
 
 #root {
@@ -136,6 +137,7 @@ h2 {
   padding: 1rem 2px 2.2rem 2px;
   margin-top: 1.25rem;
   font-size: clamp(14px, 2vw, 18px);
+  color: rgb(50, 50, 50);
 }
 
 .product-card > div {
@@ -157,7 +159,8 @@ h2 {
     "img desc"
     "info button";
   margin: 2rem 0 0 0;
-  gap: 1.5rem;
+  row-gap: 1.5rem;
+  /* column-gap: 0.5rem; */
 }
 
 .product-body > img {
@@ -165,27 +168,39 @@ h2 {
   aspect-ratio: 1/1;
   width: clamp(100px, 30vw, 250px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 20px;
+  padding: 4px;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .product-info {
   grid-area: info;
   text-align: center;
-  /* align-self: center; */
+}
+
+.product-info > div {
+  padding-bottom: 0.5rem;
 }
 
 .price {
-  font-size: 2rem;
+  font-size: clamp(1rem, 4vw, 2rem);
   font-weight: 700;
 }
 
 .rating {
-  font-size: 4rem;
+  font-size: clamp(1rem, 4vw, 4rem);
   display: inline-block;
   /* percent variable set in Product Component */
   background: linear-gradient(90deg, gold var(--percent), black 0%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.review-count {
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .product-description {
