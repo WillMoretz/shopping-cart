@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
+import { addCartItem } from "../cartItems";
 
 function Product() {
   const [productValues, setProductValues] = useState(undefined);
@@ -48,7 +49,18 @@ function Product() {
           <div className="review-count">{`Rating based on ${productValues.rating.count} user reviews`}</div>
         </div>
         <p className="product-description">{productValues.description}</p>
-        <button type="button">Add to Cart</button>
+        <button
+          type="button"
+          onClick={() =>
+            addCartItem({
+              name: productValues.title,
+              image: productValues.image,
+              price: productValues.price,
+            })
+          }
+        >
+          Add to Cart
+        </button>
       </div>
     </section>
   );
