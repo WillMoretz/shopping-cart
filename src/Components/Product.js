@@ -53,9 +53,10 @@ function Product() {
           type="button"
           onClick={() =>
             addCartItem({
-              name: productValues.title,
+              title: productValues.title,
               image: productValues.image,
               price: productValues.price,
+              id: productValues.id,
             })
           }
         >
