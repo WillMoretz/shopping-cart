@@ -17,19 +17,19 @@ function Cart() {
       </section>
     );
   const itemsDisplayList = (
-    <ul>
+    <div>
       {cartItems.map((item) => (
         <Link
           to={`../shop/${item.id}`}
           className="cart-item"
-          key={`cart${item.title}${item.id}`}
+          key={`cart${item.index}`}
         >
           <div>{item.title}</div>
           <img src={item.image} alt={item.title} />
           <div>{item.price}</div>
         </Link>
       ))}
-    </ul>
+    </div>
   );
   return <section>{itemsDisplayList}</section>;
 }
