@@ -6,6 +6,7 @@ import Home from "./Home";
 import Shop from "./Shop";
 import Product from "./Product";
 import Cart from "./Cart";
+import cartIcon from "../img/shopping-cart.svg";
 import "../index.css";
 
 async function fetchProducts() {
@@ -54,7 +55,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <Link to="/cart" className="cart-link">
-        Show Cart
+        <img src={cartIcon} alt="A link to the shopping cart page" />
       </Link>
       <footer>
         Made by <i>Will Moretz</i>
