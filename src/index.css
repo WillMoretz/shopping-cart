@@ -110,6 +110,36 @@ section {
   box-shadow: rgba(100, 100, 100, 0.45) 0 4px 12px;
 }
 
+.cart-item,
+.cart-shop-link {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item {
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 5px 0 5px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: rgb(256, 256, 254);
+  gap: 1rem;
+}
+
+.cart-shop-link > img {
+  aspect-ratio: 1/1;
+  width: 50px;
+  margin-right: 0.5rem;
+}
+
+.cart-title,
+.cart-price {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.cart-price {
+  margin-left: auto;
+}
+
 h2 {
   text-align: center;
   font-size: clamp(1.25rem, 4vw, 2.5rem);
