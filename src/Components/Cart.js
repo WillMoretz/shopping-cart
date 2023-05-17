@@ -17,19 +17,17 @@ function Cart() {
       </section>
     );
   const itemsDisplayList = (
-    <div>
+    <>
       {cartItems.map((item) => (
-        <Link
-          to={`../shop/${item.id}`}
-          className="cart-item"
-          key={`cart${item.index}`}
-        >
-          <div>{item.title}</div>
-          <img src={item.image} alt={item.title} />
-          <div>{item.price}</div>
-        </Link>
+        <div className="cart-item" key={`cart${item.index}`}>
+          <Link to={`../shop/${item.id}`} className="cart-shop-link">
+            <img src={item.image} alt={item.title} />
+            <div className="cart-title">{item.title}</div>
+          </Link>
+          <div className="cart-price">{`$${item.price}`}</div>
+        </div>
       ))}
-    </div>
+    </>
   );
   return <section>{itemsDisplayList}</section>;
 }
