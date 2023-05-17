@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { addCartItem } from "../cartItems";
+import ProductAddedPopup from "./ProductAddedPopup";
 
 function Product() {
   const [productValues, setProductValues] = useState(undefined);
+  const [shouldDisplayPopup, setShouldDisplayPopup] = useState(false);
 
   const { id } = useParams();
   if (id < 1 || id > 20 || !Number.isInteger(+id))
@@ -31,6 +33,11 @@ function Product() {
     );
   }, [productValues]);
 
+  useEffect(() => {
+    if (!shouldDisplayPopup) return;
+    setTimeout(() => setShouldDisplayPopup(false), 5000);
+  }, [shouldDisplayPopup]);
+
   return productValues === undefined ? (
     <section>loading...</section>
   ) : (
@@ -51,18 +58,20 @@ function Product() {
         <p className="product-description">{productValues.description}</p>
         <button
           type="button"
-          onClick={() =>
+          onClick={() => {
             addCartItem({
               title: productValues.title,
               image: productValues.image,
               price: productValues.price,
               id: productValues.id,
-            })
-          }
+            });
+            setShouldDisplayPopup(true);
+          }}
         >
           Add to Cart
         </button>
       </div>
+      {shouldDisplayPopup ? <ProductAddedPopup /> : <div />}
     </section>
   );
 }
