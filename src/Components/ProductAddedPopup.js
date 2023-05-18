@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-function ProductAddedPopup() {
-  const [shouldHide, setShouldHide] = useState(false);
+function ProductAddedPopup(props) {
+  const { shouldDisplay, updatePopup } = props;
+  function handleClick() {
+    updatePopup();
+  }
 
   return (
-    <div className={`product-added-popup ${shouldHide ? "hide" : ""}`}>
-      <div>Item Added To Cart</div>
-      <button type="button" onClick={() => setShouldHide(true)}>
-        Close
+    <div className={`product-added-popup ${shouldDisplay ? "" : "hide"}`}>
+      <div>Item Added to Cart</div>
+      <button type="button" onClick={() => handleClick()}>
+        X
       </button>
     </div>
   );

@@ -6,6 +6,7 @@ import ProductAddedPopup from "./ProductAddedPopup";
 function Product() {
   const [productValues, setProductValues] = useState(undefined);
   const [shouldDisplayPopup, setShouldDisplayPopup] = useState(false);
+  let timeoutID;
 
   const { id } = useParams();
   if (id < 1 || id > 20 || !Number.isInteger(+id))
@@ -35,8 +36,16 @@ function Product() {
 
   useEffect(() => {
     if (!shouldDisplayPopup) return;
-    setTimeout(() => setShouldDisplayPopup(false), 5000);
+    timeoutID = setTimeout(() => setShouldDisplayPopup(false), 5000);
   }, [shouldDisplayPopup]);
+
+  const updatePopup = () => {
+    setShouldDisplayPopup(false);
+    if (timeoutID !== undefined) {
+      clearTimeout(timeoutID);
+      timeoutID = undefined;
+    }
+  };
 
   return productValues === undefined ? (
     <section>loading...</section>
@@ -71,7 +80,10 @@ function Product() {
           Add to Cart
         </button>
       </div>
-      {shouldDisplayPopup ? <ProductAddedPopup /> : <div />}
+      <ProductAddedPopup
+        shouldDisplay={shouldDisplayPopup}
+        updatePopup={updatePopup}
+      />
     </section>
   );
 }
