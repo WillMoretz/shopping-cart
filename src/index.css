@@ -281,6 +281,28 @@ h2 {
   box-shadow: rgba(100, 100, 100, 0.45) 0 4px 12px;
 }
 
+.product-added-popup,
+.product-added-popup > button {
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
+.product-added-popup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 5px;
+  font-weight: 600;
+  position: fixed;
+  bottom: 64px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 4px 12px;
+}
+
+.product-added-popup > button {
+  border: none;
+  font-size: 1.25rem;
+}
+
 .product-added-popup.hide {
   display: none;
 }
