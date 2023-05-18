@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -32,6 +32,7 @@ async function fetchProducts() {
 function App() {
   const [fetchError, setFetchError] = useState(false);
   const [products, setProducts] = useState({});
+  const location = useLocation();
 
   useEffect(() => {
     (async () => {
@@ -54,9 +55,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-      <Link to="/cart" className="cart-link">
-        <img src={cartIcon} alt="A link to the shopping cart page" />
-      </Link>
+      {location.pathname === "/cart" ? (
+        ""
+      ) : (
+        <Link to="/cart" className="cart-link">
+          <img src={cartIcon} alt="A link to the shopping cart page" />
+        </Link>
+      )}
+
       <footer>
         Made by <i>Will Moretz</i>
       </footer>
