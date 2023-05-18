@@ -105,6 +105,14 @@ section {
   border-radius: 0.5rem;
 }
 
+@media (max-width: 600px) {
+  .cart-link {
+    width: 60px;
+    bottom: 15px;
+    right: 10px;
+  }
+}
+
 .cart-link:hover {
   filter: contrast(80%);
   box-shadow: rgba(100, 100, 100, 0.45) 0 4px 12px;
