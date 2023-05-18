@@ -25,6 +25,9 @@ function Cart() {
             <div className="cart-title">{item.title}</div>
           </Link>
           <div className="cart-price">{`$${item.price}`}</div>
+          <button type="button" className="cart-remove">
+            ✕
+          </button>
         </div>
       ))}
     </>
