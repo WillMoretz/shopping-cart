@@ -281,6 +281,10 @@ h2 {
   box-shadow: rgba(100, 100, 100, 0.45) 0 4px 12px;
 }
 
+.product-added-popup.hide {
+  display: none;
+}
+
 .contact-page {
   display: flex;
   flex-direction: column;
