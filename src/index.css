@@ -215,6 +215,15 @@ h2 {
   color: white;
   border: none;
   border-radius: 8px;
+  transition: filter 225ms ease-in-out;
+}
+
+.category-button:hover {
+  filter: contrast(80%);
+}
+
+.category-button.selected {
+  color: pink;
 }
 
 .products {
