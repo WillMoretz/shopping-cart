@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function prettifyCategoryName(category) {
   let prettyCategoryName = category.substring(0, 1).toUpperCase();
@@ -13,14 +13,27 @@ function prettifyCategoryName(category) {
 
 function CategorySelector(props) {
   const { CATEGORIES, handleClick } = props;
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  function changeSelectedCategory(category) {
+    if (category === selectedCategory) {
+      setSelectedCategory("all");
+      if (category !== "all") handleClick("all");
+      return;
+    }
+    setSelectedCategory(category);
+    handleClick(category);
+  }
 
   return (
     <div className="category-buttons">
       <button
         key="categoryall"
         type="button"
-        onClick={() => handleClick("all")}
-        className="category-button"
+        onClick={() => changeSelectedCategory("all")}
+        className={`category-button ${
+          selectedCategory === "all" ? "selected" : ""
+        }`}
       >
         All
       </button>
@@ -28,8 +41,10 @@ function CategorySelector(props) {
         <button
           key={`category${category}`}
           type="button"
-          onClick={() => handleClick(category)}
-          className="category-button"
+          onClick={() => changeSelectedCategory(category)}
+          className={`category-button ${
+            selectedCategory === category ? "selected" : ""
+          }`}
         >
           {prettifyCategoryName(category)}
         </button>
