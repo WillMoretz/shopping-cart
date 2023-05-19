@@ -167,10 +167,31 @@ section {
   color: red;
 }
 
+.cart-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 .total-cost-message {
-  text-align: center;
   font-size: clamp(0.9rem, 3vw, 1.25rem);
   padding: 1rem 2rem 0 2rem;
+}
+
+.purchase-button {
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  padding: 0.25em 0.75em 0.25em 0.75em;
+  border: none;
+  background-color: rgb(50, 50, 50);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.45) 0 4px 12px;
+  transition: filter 225ms ease-in-out, box-shadow 225ms ease-in-out;
+}
+
+.purchase-button:hover {
+  filter: contrast(80%);
+  box-shadow: rgba(100, 100, 100, 0.45) 0px 4px 12px;
 }
 
 h2 {
