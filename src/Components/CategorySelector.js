@@ -15,11 +15,12 @@ function CategorySelector(props) {
   const { CATEGORIES, handleClick } = props;
 
   return (
-    <div>
+    <div className="category-buttons">
       <button
         key="categoryall"
         type="button"
         onClick={() => handleClick("all")}
+        className="category-button"
       >
         All
       </button>
@@ -28,6 +29,7 @@ function CategorySelector(props) {
           key={`category${category}`}
           type="button"
           onClick={() => handleClick(category)}
+          className="category-button"
         >
           {prettifyCategoryName(category)}
         </button>
