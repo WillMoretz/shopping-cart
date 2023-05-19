@@ -200,6 +200,23 @@ h2 {
   margin: 0.5rem 0 0rem 0;
 }
 
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 1rem 8px 3rem 8px;
+}
+
+.category-button {
+  font-size: 1.25rem;
+  padding: 0.2em 0.4em 0.2em 0.4em;
+  background-color: rgb(50, 50, 50);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
