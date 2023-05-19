@@ -167,6 +167,12 @@ section {
   color: red;
 }
 
+.total-cost-message {
+  text-align: center;
+  font-size: clamp(0.9rem, 3vw, 1.25rem);
+  padding: 1rem 2rem 0 2rem;
+}
+
 h2 {
   text-align: center;
   font-size: clamp(1.25rem, 4vw, 2.5rem);
