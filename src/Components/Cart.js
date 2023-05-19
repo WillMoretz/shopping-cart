@@ -52,9 +52,14 @@ function Cart() {
   return (
     <section>
       {itemsDisplayList}
-      <div className="total-cost-message">{`The total cost is $${calculateTotalCost(
-        cartItems
-      )}. If this is was a real shop website, the purchase button would work, however since the shop is fake, the purchase button is purely decorative.`}</div>
+      <div className="cart-details">
+        <div className="total-cost-message">{`The total cost is $${calculateTotalCost(
+          cartItems
+        )}. If this is was a real shop website, the purchase button would work, however since the shop is fake, the purchase button is purely decorative.`}</div>
+        <button type="button" className="purchase-button">
+          Purchase
+        </button>
+      </div>
     </section>
   );
 }
