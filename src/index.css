@@ -83,11 +83,6 @@ header,
   background-color: black;
 }
 
-.dune {
-  aspect-ratio: 1/1;
-  width: 300px;
-}
-
 section {
   flex: 1;
   background-color: rgb(250, 250, 250);
@@ -412,6 +407,35 @@ h2 {
   margin: 0.5rem 0 0 0;
   font-size: clamp(1rem, 4vw, 1.5rem);
   text-align: center;
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas:
+    "title img"
+    "info img"
+    "link img";
+  justify-content: center;
+  padding: 2rem 8px 1rem 8px;
+}
+
+.homepage > h2 {
+  grid-area: title;
+}
+
+.homepage > p {
+  grid-area: info;
+}
+
+.homepage > a {
+  grid-area: link;
+}
+
+.homepage > img {
+  grid-area: img;
+  height: 500px;
 }
 
 footer {
