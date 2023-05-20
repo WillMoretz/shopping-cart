@@ -4,15 +4,11 @@ import logo from "../img/dune.svg";
 
 function Home() {
   return (
-    <section>
+    <section className="homepage">
       <h2>Sahara</h2>
       <p>Welcome to Sahara. Its like Amazon, but way more barren</p>
       <Link to="/shop">Shop Now</Link>
-      <img
-        src={logo}
-        alt="a sand dune, the sahara shop logo"
-        className="dune"
-      />
+      <img src={logo} alt="a sand dune, the sahara shop logo" />
     </section>
   );
 }
