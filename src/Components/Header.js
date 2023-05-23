@@ -18,13 +18,6 @@ function Header() {
           <img src={logo} alt="link to home page" className="logo" />
           <h1>Sahara</h1>
         </Link>
-        <button
-          type="button"
-          className="header-links-toggle"
-          onClick={() => toggleHeaderLinks(true)}
-        >
-          {navIsHidden ? "☰" : "X"}
-        </button>
       </div>
       <nav>
         <ul className={`header-links ${navIsHidden ? "hidden" : "shown"}`}>
@@ -44,6 +37,13 @@ function Header() {
             </Link>
           </li>
         </ul>
+        <button
+          type="button"
+          className="header-links-toggle"
+          onClick={() => toggleHeaderLinks(true)}
+        >
+          {navIsHidden ? "☰" : "X"}
+        </button>
       </nav>
     </header>
   );
