@@ -23,30 +23,26 @@ function Header() {
           className="header-links-toggle"
           onClick={() => toggleHeaderLinks(true)}
         >
-          {navIsHidden ? "|||" : "X"}
+          {navIsHidden ? "☰" : "X"}
         </button>
       </div>
       <nav>
         <ul className={`header-links ${navIsHidden ? "hidden" : "shown"}`}>
-          <div className="line-break" aria-hidden="true" />
           <li>
             <Link to="/" onClick={() => toggleHeaderLinks(true)}>
               Home
             </Link>
           </li>
-          <div className="line-break" aria-hidden="true" />
           <li>
             <Link to="/shop" onClick={() => toggleHeaderLinks(true)}>
               Shop
             </Link>
           </li>
-          <div className="line-break" aria-hidden="true" />
           <li>
             <Link to="/contact" onClick={() => toggleHeaderLinks(true)}>
               Contact
             </Link>
           </li>
-          <div className="line-break" aria-hidden="true" />
         </ul>
       </nav>
     </header>
