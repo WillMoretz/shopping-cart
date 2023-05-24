@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://willmoretz.github.io/shopping-cart",
+  "homepage": "https://willmoretz.github.io/shopping-cart/",
   "scripts": {
     "start": "webpack serve --mode=development --open --no-hot",
     "build": "webpack --mode=production",
