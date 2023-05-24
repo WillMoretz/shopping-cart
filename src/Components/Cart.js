@@ -23,12 +23,6 @@ function Cart() {
   }
 
   if (cartItems === undefined) return <section>loading...</section>;
-  if (cartItems.length === 0)
-    return (
-      <section>
-        <h2>Empty!</h2>
-      </section>
-    );
   const itemsDisplayList = (
     <>
       {cartItems.map((item) => (
@@ -51,7 +45,11 @@ function Cart() {
   );
   return (
     <section>
-      {itemsDisplayList}
+      {cartItems.length === 0 ? (
+        <div className="cart-empty">Empty!</div>
+      ) : (
+        itemsDisplayList
+      )}
       <div className="cart-details">
         <div className="total-cost-message">{`The total cost is $${calculateTotalCost(
           cartItems
