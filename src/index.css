@@ -467,8 +467,10 @@ h2 {
   padding: 2rem 8px 1rem 8px;
   column-gap: 2rem;
   text-align: center;
-  /* background-image: url(img/sand.jpg);
-  backdrop-filter: blur(1px); */
+  background-image: url(img/sand-wide.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .homepage > h2 {
@@ -481,6 +483,7 @@ h2 {
       "info img"
       "link link";
     row-gap: 2rem;
+    background-image: url(img/sand.jpg);
   }
 
   .homepage > h2 {
