@@ -89,6 +89,7 @@ header {
     padding: 20vh 0 0 0;
     margin: 0;
     z-index: 999;
+    font-size: 2rem;
   }
 
   .header-links.shown {
