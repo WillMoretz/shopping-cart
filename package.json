@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://WillMoretz.github.io/my-app",
   "scripts": {
     "start": "webpack serve --mode=development --open --no-hot",
     "build": "webpack --mode=production",
