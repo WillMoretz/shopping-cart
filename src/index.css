@@ -29,7 +29,7 @@ button:hover {
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.55);
   display: flex;
 }
 
@@ -61,7 +61,8 @@ header {
   }
 
   .header-top {
-    background-color: rgb(250, 250, 250);
+    background-color: rgba(250, 250, 250, 0.7);
+    padding: 0.5rem 0 0.5rem 0;
   }
 
   .brand {
