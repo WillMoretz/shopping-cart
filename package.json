@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://willmoretz.github.io/shopping-cart/",
   "scripts": {
     "start": "webpack serve --mode=development --open --no-hot",
-    "build": "webpack --mode=production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "Will Moretz",
