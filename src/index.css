@@ -459,7 +459,7 @@ h2 {
 .homepage {
   display: grid;
   grid-template-columns: min-content min-content;
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: min-content 1fr 1fr;
   grid-template-areas:
     "title img"
     "info img"
@@ -478,11 +478,21 @@ h2 {
   grid-area: title;
 }
 
+.homepage > p {
+  grid-area: info;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  width: min(30vw, 400px);
+  font-weight: 700;
+  padding-top: 2rem;
+}
+
 @media (max-width: 600px) {
   .homepage {
     grid-template-areas:
       "info img"
       "link link";
+    grid-template-rows: min-content min-content;
+    /* grid-template-columns: 1fr min-content; */
     row-gap: 2rem;
     background-image: url(img/sand.jpg);
     background-position: top;
@@ -491,13 +501,14 @@ h2 {
   .homepage > h2 {
     display: none;
   }
-}
 
-.homepage > p {
-  grid-area: info;
-  font-size: clamp(1rem, 3vw, 1.25rem);
-  width: min(30vw, 400px);
-  font-weight: 700;
+  .homepage > p {
+    color: rgb(240, 240, 240);
+    padding: 4px 2px 4px 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 150px;
+    height: min-content;
+  }
 }
 
 .homepage > a {
@@ -507,10 +518,11 @@ h2 {
   color: white;
   width: fit-content;
   height: fit-content;
-  place-self: center;
+  justify-self: center;
+  align-self: top;
   padding: 0.25em 0.5em 0.25em 0.5em;
   border-radius: 16px;
-  border: 2px solid rgba(256, 256, 256, 0.1);
+  border: 2px solid rgba(256, 256, 256, 0.6);
   transition: filter 225ms ease-in-out;
 }
 
